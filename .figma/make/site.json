@@ -1,0 +1,15 @@
+{
+  "title": "Gbedemah Counsellor",
+  "description": "Showcasing the work of a multi-disciplinary designer, this platform highlights UI/UX, graphic design, and prompt engineering services for potential clients.",
+  "language": "en",
+  "icons": {
+    "icon": "/.figma/make/favicon.png"
+  },
+  "openGraph": {
+    "image": "/.figma/make/social-image.png"
+  },
+  "accessibility": {
+    "addBypassLinks": false,
+    "ignoreReducedMotion": false
+  }
+}

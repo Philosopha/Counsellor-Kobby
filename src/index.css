@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,300;1,9..144,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+@import 'tailwindcss';
+
+html,
+body,
+#root {
+  height: 100%;
+  scroll-behavior: smooth;
+}
+
+:root {
+  --bg: #ffffff;
+  --surface: #f4f6fb;
+  --surface-2: #e8edf7;
+  --border: rgba(0,56,168,0.14);
+  --text: #0a0a0a;
+  --muted: #5a6a8a;
+  --accent: #0038a8;
+  --accent-dim: rgba(0,56,168,0.08);
+  --accent-glow: rgba(0,56,168,0.2);
+  font-family: 'Inter', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+
+* { box-sizing: border-box; }
+
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: rgba(0,56,168,0.2); border-radius: 2px; }
+
+.font-display { font-family: 'Fraunces', serif; }
+
+.skill-bar-fill {
+  height: 2px;
+  background: var(--accent);
+  border-radius: 1px;
+  transition: width 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.fade-up { animation: fadeUp 0.7s ease both; }
+
+@keyframes ticker {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+@keyframes pulse-dot {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.3; }
+}
+
+.pulse-dot { animation: pulse-dot 2s ease infinite; }
+
+/* ─── Hero image float ────────────────────────────────────────────────────── */
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50%       { transform: translateY(-12px); }
+}
+.hero-float { animation: float 5s ease-in-out infinite; }
+
+/* ─── Scroll-triggered fade-up ────────────────────────────────────────────── */
+/* Applied via JS: element starts invisible, class added when in view */
+.reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.75s cubic-bezier(0.16,1,0.3,1), transform 0.75s cubic-bezier(0.16,1,0.3,1);
+}
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+/* Stagger children inside a reveal container */
+.reveal-children > * {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s cubic-bezier(0.16,1,0.3,1), transform 0.6s cubic-bezier(0.16,1,0.3,1);
+}
+.reveal-children.is-visible > *:nth-child(1) { opacity:1; transform:translateY(0); transition-delay:0ms; }
+.reveal-children.is-visible > *:nth-child(2) { opacity:1; transform:translateY(0); transition-delay:80ms; }
+.reveal-children.is-visible > *:nth-child(3) { opacity:1; transform:translateY(0); transition-delay:160ms; }
+.reveal-children.is-visible > *:nth-child(4) { opacity:1; transform:translateY(0); transition-delay:240ms; }
+.reveal-children.is-visible > *:nth-child(n+5) { opacity:1; transform:translateY(0); transition-delay:320ms; }
+
+/* ─── Subtle text shimmer (use sparingly on section headings) ─────────────── */
+@keyframes shimmer {
+  0%   { background-position: -200% center; }
+  100% { background-position:  200% center; }
+}
+.text-shimmer {
+  background: linear-gradient(90deg, var(--accent) 0%, #4d8bff 45%, var(--accent) 100%);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shimmer 4s linear infinite;
+}
+
+/* ─── Projects carousel ───────────────────────────────────────────────────── */
+
+/* Section must never bleed horizontally */
+#Projects { overflow: hidden; }
+
+/* Swipe hint default state — component's scoped <style> handles show/hide */
+.projects-swipe-hint { display: none; }
+.projects-side-arrow { display: none; }
