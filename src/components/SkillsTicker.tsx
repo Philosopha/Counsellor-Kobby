@@ -174,7 +174,7 @@ export default function SkillsTicker() {
         zIndex: 2, pointerEvents: "none",
       }} />
 
-      <div style={{ display: "flex", flexDirection: "column", gap: 14 }}>
+      <div style={{ display: "flex", flexDirection: "column", gap: 16 }}>
         {/* Row 1 — scrolls left */}
         <MarqueeRow items={ROW1} direction="left" duration={34} />
         {/* Row 2 — scrolls right (opposite direction) */}

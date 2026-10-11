@@ -81,25 +81,15 @@ export default function GraphicDesignPage({ onBack }: GraphicDesignPageProps) {
         </span>
       </div>
 
-      <div style={{ maxWidth: "1200px", margin: "0 auto", padding: "60px 24px" }}>
-        <span
-          style={{
-            fontSize: "11px",
-            fontWeight: 500,
-            color: "var(--accent)",
-            letterSpacing: "0.12em",
-            textTransform: "uppercase",
-          }}
-        >
-          Graphic Design
-        </span>
+      <div style={{ maxWidth: "1200px", margin: "0 auto", padding: "56px 24px 96px" }}>
+        <span className="eyebrow">Graphic Design</span>
         <h1
           className="font-display"
           style={{
             fontSize: "clamp(32px, 5vw, 60px)",
             fontWeight: 700,
-            letterSpacing: "-0.02em",
-            margin: "16px 0 12px",
+            letterSpacing: "-0.025em",
+            margin: "4px 0 12px",
             lineHeight: 1.05,
           }}
         >
@@ -111,7 +101,7 @@ export default function GraphicDesignPage({ onBack }: GraphicDesignPageProps) {
             color: "var(--muted)",
             lineHeight: 1.7,
             maxWidth: "520px",
-            marginBottom: "60px",
+            marginBottom: "48px",
           }}
         >
           Brand identities, poster art, social kits, and print collateral — visual craft at every scale.
@@ -149,7 +139,7 @@ export default function GraphicDesignPage({ onBack }: GraphicDesignPageProps) {
                   style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }}
                 />
               </div>
-              <div style={{ padding: "24px" }}>
+              <div style={{ padding: "20px 20px 24px" }}>
                 <h3
                   style={{
                     fontSize: "16px",

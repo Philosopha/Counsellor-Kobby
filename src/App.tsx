@@ -34,7 +34,7 @@ const RESPONSIVE_STYLES = `
     .show-mobile   { display: flex !important; }
     .hero-grid     { grid-template-columns: 1fr !important; gap: 40px !important; }
     .hero-grid > div:last-child { order: -1; }
-    .about-grid    { grid-template-columns: 1fr !important; gap: 40px !important; }
+    .about-grid    { grid-template-columns: 1fr !important; gap: 32px !important; }
     .services-grid { grid-template-columns: 1fr !important; }
     .interests-grid { grid-template-columns: repeat(2, 1fr) !important; }
     .contact-grid  { grid-template-columns: 1fr !important; gap: 40px !important; }

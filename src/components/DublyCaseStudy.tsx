@@ -1,7 +1,6 @@
 // ─── Dubly Case Study Section ─────────────────────────────────────────────────
 // Sits between Projects and Services in the main portfolio page.
 
-import { useState } from "react";
 import d1 from "@/imports/d1.png";
 
 // (SVG mockup replaced by real screenshot d1.png)
@@ -12,21 +11,16 @@ interface DublyCaseStudyProps {
 }
 
 export default function DublyCaseStudy({ onViewCaseStudy }: DublyCaseStudyProps) {
-  const [btnHovered, setBtnHovered] = useState(false);
-  const [btnActive,  setBtnActive]  = useState(false);
 
   return (
     <section
       id="DublyCaseStudy"
-      style={{ padding: "100px 24px", background: "var(--surface)", overflow: "hidden" }}
+      style={{ padding: "96px 24px", background: "var(--surface)", overflow: "hidden" }}
     >
       <div style={{ maxWidth: 1200, margin: "0 auto" }}>
 
         {/* ── Label ── */}
-        <span style={{
-          fontSize: 11, fontWeight: 500, color: "var(--accent)",
-          letterSpacing: "0.14em", textTransform: "uppercase", display: "block", marginBottom: 16,
-        }}>
+        <span className="eyebrow" style={{ marginBottom: 48, display: "inline-flex" }}>
           Case Study
         </span>
 
@@ -113,38 +107,10 @@ export default function DublyCaseStudy({ onViewCaseStudy }: DublyCaseStudyProps)
             <div style={{ paddingTop: 8 }}>
               <button
                 onClick={onViewCaseStudy}
-                onMouseEnter={() => setBtnHovered(true)}
-                onMouseLeave={() => { setBtnHovered(false); setBtnActive(false); }}
-                onMouseDown={() => setBtnActive(true)}
-                onMouseUp={() => setBtnActive(false)}
-                style={{
-                  display: "inline-flex",
-                  alignItems: "center",
-                  gap: 10,
-                  background: btnActive
-                    ? "rgba(0,30,90,1)"
-                    : btnHovered
-                      ? "rgba(0,46,136,1)"
-                      : "var(--accent)",
-                  color: "#fff",
-                  padding: "14px 28px",
-                  borderRadius: 8,
-                  fontSize: 13,
-                  fontWeight: 700,
-                  letterSpacing: "0.05em",
-                  textTransform: "uppercase",
-                  textDecoration: "none",
-                  border: "none",
-                  cursor: "pointer",
-                  transition: "background 0.18s, transform 0.15s, box-shadow 0.18s",
-                  transform: btnActive ? "scale(0.97)" : btnHovered ? "translateY(-2px)" : "none",
-                  boxShadow: btnHovered && !btnActive
-                    ? "0 8px 28px rgba(0,56,168,0.35)"
-                    : "0 2px 8px rgba(0,56,168,0.2)",
-                }}
+                className="btn-primary"
               >
                 View Full Case Study
-                <span style={{ fontSize: 16, lineHeight: 1 }}>→</span>
+                <span aria-hidden style={{ fontSize: 16, lineHeight: 1 }}>→</span>
               </button>
             </div>
           </div>

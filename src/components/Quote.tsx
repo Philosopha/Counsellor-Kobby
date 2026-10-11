@@ -65,7 +65,7 @@ export default function Quote() {
     <section
       ref={ref}
       style={{
-        padding: "120px 24px",
+        padding: "96px 24px",
         background: "var(--accent)",
         position: "relative",
         overflow: "hidden",

@@ -44,14 +44,14 @@ export default function Services() {
   const grid   = useReveal(0.1);
 
   return (
-    <section id="Services" style={{ padding: "100px 24px", background: "var(--bg)" }}>
+    <section id="Services" style={{ padding: "96px 24px", background: "var(--bg)" }}>
       <div style={{ maxWidth: 1200, margin: "0 auto" }}>
 
         {/* Header */}
         <div
           ref={header.ref}
           className={`reveal${header.visible ? " is-visible" : ""}`}
-          style={{ marginBottom: 56 }}
+          style={{ marginBottom: 48 }}
         >
           <span className="eyebrow">What I Do</span>
           <h2 className="font-display" style={{

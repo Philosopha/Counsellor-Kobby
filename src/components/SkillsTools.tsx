@@ -54,7 +54,7 @@ export default function SkillsTools() {
   const toolsReveal = useReveal(0.1);
 
   return (
-    <section style={{ padding: "100px 24px", background: "var(--surface)" }}>
+    <section style={{ padding: "96px 24px", background: "var(--surface)" }}>
       <div style={{ maxWidth: 1200, margin: "0 auto" }}>
 
         {/* Header */}

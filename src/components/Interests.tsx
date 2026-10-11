@@ -23,7 +23,7 @@ export default function Interests() {
   const grid   = useReveal(0.1);
 
   return (
-    <section style={{ padding: "100px 24px", background: "var(--bg)" }}>
+    <section style={{ padding: "96px 24px", background: "var(--bg)" }}>
       <div style={{ maxWidth: 1200, margin: "0 auto" }}>
 
         {/* Header */}

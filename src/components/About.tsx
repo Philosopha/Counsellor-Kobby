@@ -29,22 +29,25 @@ export default function About({ onScrollTo }: AboutProps) {
   const bio     = useReveal(0.1);
 
   return (
-    <section id="About" style={{ padding: "100px 24px", background: "var(--bg)", overflow: "hidden" }}>
+    <section id="About" style={{ padding: "96px 24px", background: "var(--bg)", overflow: "hidden" }}>
       <div style={{ maxWidth: "1200px", margin: "0 auto" }}>
 
         {/* Label — fades up first */}
-        <div ref={label.ref} className={`reveal${label.visible ? " is-visible" : ""}`}>
-          <span
+        <div ref={label.ref} className={`reveal${label.visible ? " is-visible" : ""}`} style={{ marginBottom: 48 }}>
+          <span className="eyebrow">About Me</span>
+          <h2
+            className="font-display"
             style={{
-              fontSize: "11px",
-              fontWeight: 500,
-              color: "var(--accent)",
-              letterSpacing: "0.12em",
-              textTransform: "uppercase",
+              fontSize: "clamp(30px, 3.8vw, 50px)",
+              fontWeight: 600,
+              lineHeight: 1.1,
+              letterSpacing: "-0.025em",
+              margin: "4px 0 0",
             }}
           >
-            About Me
-          </span>
+            Design at the intersection of{" "}
+            <em className="text-shimmer" style={{ fontStyle: "italic" }}>art &amp; intelligence</em>
+          </h2>
         </div>
 
         <div
@@ -52,9 +55,8 @@ export default function About({ onScrollTo }: AboutProps) {
           style={{
             display: "grid",
             gridTemplateColumns: "380px 1fr",
-            gap: "32px",
+            gap: "48px",
             alignItems: "center",
-            marginTop: "40px",
           }}
         >
           {/* Portrait — slides in from left */}
@@ -105,48 +107,20 @@ export default function About({ onScrollTo }: AboutProps) {
               transitionDelay: "200ms",
             }}
           >
-            <h2
-              className="font-display"
-              style={{
-                fontSize: "clamp(30px, 3.8vw, 50px)",
-                fontWeight: 600,
-                lineHeight: 1.15,
-                letterSpacing: "-0.02em",
-                marginBottom: "28px",
-              }}
-            >
-              Design at the intersection of{" "}
-              <em className="text-shimmer" style={{ fontStyle: "italic" }}>art &amp; intelligence</em>
-            </h2>
-
             <p style={{ fontSize: "16px", lineHeight: 1.8, color: "var(--muted)", marginBottom: "20px" }}>
               I&apos;m Gbedemah Counsellor — a multi-disciplinary creative who bridges visual design and
               artificial intelligence. With a deep passion for crafting beautiful, functional interfaces and
               compelling brand identities, I also specialize in engineering precise AI prompts that unlock
               creative and operational potential.
             </p>
-            <p style={{ fontSize: "16px", lineHeight: 1.8, color: "var(--muted)", marginBottom: "40px" }}>
+            <p style={{ fontSize: "16px", lineHeight: 1.8, color: "var(--muted)", marginBottom: "36px" }}>
               Whether it&apos;s a pixel-perfect mobile app, a striking brand system, or a finely-tuned AI
               workflow — I bring the same obsessive attention to craft and clarity of purpose to every project.
             </p>
 
             <button
               onClick={() => onScrollTo("Contact")}
-              style={{
-                background: "var(--accent)",
-                color: "#fff",
-                padding: "13px 28px",
-                borderRadius: "6px",
-                fontSize: "13px",
-                fontWeight: 700,
-                border: "none",
-                cursor: "pointer",
-                letterSpacing: "0.04em",
-                textTransform: "uppercase",
-                transition: "opacity 0.2s, transform 0.2s",
-              }}
-              onMouseEnter={(e) => { e.currentTarget.style.opacity = "0.85"; e.currentTarget.style.transform = "translateY(-1px)"; }}
-              onMouseLeave={(e) => { e.currentTarget.style.opacity = "1"; e.currentTarget.style.transform = "translateY(0)"; }}
+              className="btn-primary"
             >
               Work with me →
             </button>

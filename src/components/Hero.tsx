@@ -15,7 +15,7 @@ export default function Hero({ onScrollTo }: HeroProps) {
         minHeight: "100vh",
         display: "flex",
         alignItems: "center",
-        paddingTop: "80px",
+        paddingTop: "64px",
         background: "linear-gradient(135deg, #ffffff 55%, #eef2fb 100%)",
         position: "relative",
         overflow: "hidden",
@@ -36,7 +36,7 @@ export default function Hero({ onScrollTo }: HeroProps) {
         style={{
           maxWidth: "1200px",
           margin: "0 auto",
-          padding: "60px 24px",
+          padding: "80px 24px",
           display: "grid",
           gridTemplateColumns: "1fr 1fr",
           gap: "40px",
