@@ -127,50 +127,16 @@ export default function Hero({ onScrollTo }: HeroProps) {
           </div>
 
           {/* CTAs */}
-          <div style={{ display: "flex", gap: "14px", flexWrap: "wrap" }}>
+          <div style={{ display: "flex", gap: "12px", flexWrap: "wrap" }}>
             <button
               onClick={() => onScrollTo("Projects")}
-              style={{
-                background: "var(--accent)",
-                color: "#ffffff",
-                padding: "14px 28px",
-                borderRadius: "4px",
-                fontSize: "14px",
-                fontWeight: 700,
-                border: "none",
-                cursor: "pointer",
-                letterSpacing: "0.02em",
-                display: "flex",
-                alignItems: "center",
-                gap: "8px",
-                transition: "opacity 0.2s",
-              }}
-              onMouseEnter={(e) => (e.currentTarget.style.opacity = "0.85")}
-              onMouseLeave={(e) => (e.currentTarget.style.opacity = "1")}
+              className="btn-primary"
             >
-              View My Work <span>→</span>
+              View My Work <span aria-hidden>→</span>
             </button>
             <button
               onClick={() => onScrollTo("Contact")}
-              style={{
-                background: "transparent",
-                color: "var(--text)",
-                padding: "14px 28px",
-                borderRadius: "4px",
-                fontSize: "14px",
-                fontWeight: 600,
-                border: "1px solid var(--border)",
-                cursor: "pointer",
-                transition: "border-color 0.2s, color 0.2s",
-              }}
-              onMouseEnter={(e) => {
-                e.currentTarget.style.borderColor = "var(--accent)";
-                e.currentTarget.style.color = "var(--accent)";
-              }}
-              onMouseLeave={(e) => {
-                e.currentTarget.style.borderColor = "var(--border)";
-                e.currentTarget.style.color = "var(--text)";
-              }}
+              className="btn-outline"
             >
               Let&apos;s Talk
             </button>
